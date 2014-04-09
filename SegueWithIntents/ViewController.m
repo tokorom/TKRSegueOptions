@@ -7,23 +7,51 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
-
-@end
+#import "NextViewController.h"
 
 @implementation ViewController
 
-- (void)viewDidLoad
+//----------------------------------------------------------------------------//
+#pragma mark - UIViewController
+//----------------------------------------------------------------------------//
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(NSDictionary *)intents
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    if ([@"Push" isEqualToString:segue.identifier]) {
+
+        UIViewController *destinationViewController = segue.destinationViewController;
+
+        if ([destinationViewController isKindOfClass:[NextViewController class]]) {
+            NextViewController* nextViewController = (NextViewController *)destinationViewController;
+            nextViewController.number = @1;
+        } 
+    } else if ([@"Modal" isEqualToString:segue.identifier]) {
+
+        UIViewController *destinationViewController = segue.destinationViewController;
+
+        if ([destinationViewController isKindOfClass:[NextViewController class]]) {
+            NextViewController* nextViewController = (NextViewController *)destinationViewController;
+            nextViewController.number = @2;
+        } 
+    }
 }
 
-- (void)didReceiveMemoryWarning
+//----------------------------------------------------------------------------//
+#pragma mark - IBAction
+//----------------------------------------------------------------------------//
+
+- (IBAction)push
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self performSegueWithIdentifier:@"Push" sender:nil];
+}
+
+- (IBAction)modal
+{
+    [self performSegueWithIdentifier:@"Modal" sender:nil];
+}
+
+- (IBAction)unwindActionForSegue:(UIStoryboardSegue *)segue
+{
 }
 
 @end

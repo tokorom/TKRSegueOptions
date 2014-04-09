@@ -22,6 +22,8 @@
 		066D56F918F515E900CA5F1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 066D56D818F515E900CA5F1E /* UIKit.framework */; };
 		066D570118F515E900CA5F1E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 066D56FF18F515E900CA5F1E /* InfoPlist.strings */; };
 		066D570318F515E900CA5F1E /* SegueWithIntentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 066D570218F515E900CA5F1E /* SegueWithIntentsTests.m */; };
+		066D570E18F516B900CA5F1E /* UIViewController+Intents.m in Sources */ = {isa = PBXBuildFile; fileRef = 066D570D18F516B900CA5F1E /* UIViewController+Intents.m */; };
+		066D571118F5193400CA5F1E /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 066D571018F5193400CA5F1E /* NextViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		066D56FE18F515E900CA5F1E /* SegueWithIntentsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SegueWithIntentsTests-Info.plist"; sourceTree = "<group>"; };
 		066D570018F515E900CA5F1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		066D570218F515E900CA5F1E /* SegueWithIntentsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegueWithIntentsTests.m; sourceTree = "<group>"; };
+		066D570C18F516B900CA5F1E /* UIViewController+Intents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Intents.h"; sourceTree = "<group>"; };
+		066D570D18F516B900CA5F1E /* UIViewController+Intents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Intents.m"; sourceTree = "<group>"; };
+		066D570F18F5193400CA5F1E /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		066D571018F5193400CA5F1E /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,10 @@
 		066D56DA18F515E900CA5F1E /* SegueWithIntents */ = {
 			isa = PBXGroup;
 			children = (
+				066D570F18F5193400CA5F1E /* NextViewController.h */,
+				066D571018F5193400CA5F1E /* NextViewController.m */,
+				066D570C18F516B900CA5F1E /* UIViewController+Intents.h */,
+				066D570D18F516B900CA5F1E /* UIViewController+Intents.m */,
 				066D56E318F515E900CA5F1E /* AppDelegate.h */,
 				066D56E418F515E900CA5F1E /* AppDelegate.m */,
 				066D56E618F515E900CA5F1E /* Main_iPhone.storyboard */,
@@ -253,8 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				066D571118F5193400CA5F1E /* NextViewController.m in Sources */,
 				066D56EE18F515E900CA5F1E /* ViewController.m in Sources */,
 				066D56E518F515E900CA5F1E /* AppDelegate.m in Sources */,
+				066D570E18F516B900CA5F1E /* UIViewController+Intents.m in Sources */,
 				066D56E118F515E900CA5F1E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -5,4 +5,10 @@
 //
 
 @interface UIViewController (Intents)
+
+- (void)performSegueWithIdentifier:(NSString *)identifier intent:(id)intent;
+- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender intent:(id)intent;
+
+- (id)intent;
+
 @end

@@ -5,6 +5,7 @@
 //
 
 #import "NextViewController.h"
+#import "UIViewController+Intents.h"
 
 @interface NextViewController ()
 @property (weak) IBOutlet UILabel *label;
@@ -20,7 +21,7 @@
 {
     [super viewDidLoad];
 
-    self.label.text = [self.number stringValue];
+    self.label.text = [self.intent stringValue];
 }
 
 //----------------------------------------------------------------------------//

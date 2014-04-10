@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "NextViewController.h"
+#import "UIViewController+Intents.h"
 
 @implementation ViewController
 
@@ -15,6 +16,7 @@
 #pragma mark - UIViewController
 //----------------------------------------------------------------------------//
 
+/*
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(NSDictionary *)intents
 {
     if ([@"Push" isEqualToString:segue.identifier]) {
@@ -35,6 +37,7 @@
         } 
     }
 }
+*/
 
 //----------------------------------------------------------------------------//
 #pragma mark - IBAction
@@ -42,11 +45,25 @@
 
 - (IBAction)push
 {
-    [self performSegueWithIdentifier:@"Push" sender:nil];
+/*     [self performSegueWithIdentifier:@"Push" sender:nil]; */
+
+    // オブジェクトを簡単に渡す
+    [self performSegueWithIdentifier:@"Push" intent:@1];
+
+    // Dictionary形式で複数渡す
+    NSDictionary *intent = @{@"item": item, @"shop": shop};
+    [self performSegueWithIdentifier:@"Push" intent:intent];
+
+    // クラス形式できっちり渡す
+    TKRIntent *intent = [TKRIntent intentWithObject:@"hello"];
+    [self performSegueWithIdentifier:@"Push" intent:intent];
 }
 
 - (IBAction)modal
 {
+/*     [self performSegueWithIdentifier:@"Modal" sender:nil]; */
+    
+
     [self performSegueWithIdentifier:@"Modal" sender:nil];
 }
 

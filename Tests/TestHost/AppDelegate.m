@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  SegueWithIntents
+//  TestHost
 //
-//  Created by ytokoro on 4/9/14.
+//  Created by ytokoro on 4/11/14.
 //  Copyright (c) 2014 tokoro. All rights reserved.
 //
 

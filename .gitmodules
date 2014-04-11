@@ -1,0 +1,6 @@
+[submodule "Tests/Externals/TKRGuard"]
+	path = Tests/Externals/TKRGuard
+	url = https://github.com/tokorom/TKRGuard.git
+[submodule "Tests/Externals/expecta"]
+	path = Tests/Externals/expecta
+	url = https://github.com/specta/expecta.git

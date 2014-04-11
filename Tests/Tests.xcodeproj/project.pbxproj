@@ -22,8 +22,6 @@
 		06F88EE918F7CC380078E637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F88EE718F7CC380078E637 /* Main.storyboard */; };
 		06F88EEF18F7CC380078E637 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F88EEE18F7CC380078E637 /* ViewController.m */; };
 		06F88EF118F7CC380078E637 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F88EF018F7CC380078E637 /* Images.xcassets */; };
-		06F88F3518F7D2350078E637 /* TKRGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F88F2218F7D2350078E637 /* TKRGuard.m */; };
-		06F88F3618F7D2350078E637 /* TKRGuardToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F88F2518F7D2350078E637 /* TKRGuardToken.m */; };
 		06F88FC818F7D5290078E637 /* EXPBackwardCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F88F4A18F7D5290078E637 /* EXPBackwardCompatibility.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06F88FC918F7D5290078E637 /* EXPBlockDefinedMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F88F4C18F7D5290078E637 /* EXPBlockDefinedMatcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06F88FCA18F7D5290078E637 /* EXPDoubleTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F88F4F18F7D5290078E637 /* EXPDoubleTuple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -96,11 +94,6 @@
 		06F88EED18F7CC380078E637 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		06F88EEE18F7CC380078E637 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		06F88EF018F7CC380078E637 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		06F88F2118F7D2350078E637 /* TKRGuard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKRGuard.h; sourceTree = "<group>"; };
-		06F88F2218F7D2350078E637 /* TKRGuard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKRGuard.m; sourceTree = "<group>"; };
-		06F88F2318F7D2350078E637 /* TKRGuardStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKRGuardStatus.h; sourceTree = "<group>"; };
-		06F88F2418F7D2350078E637 /* TKRGuardToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKRGuardToken.h; sourceTree = "<group>"; };
-		06F88F2518F7D2350078E637 /* TKRGuardToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKRGuardToken.m; sourceTree = "<group>"; };
 		06F88F4918F7D5290078E637 /* EXPBackwardCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPBackwardCompatibility.h; sourceTree = "<group>"; };
 		06F88F4A18F7D5290078E637 /* EXPBackwardCompatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPBackwardCompatibility.m; sourceTree = "<group>"; };
 		06F88F4B18F7D5290078E637 /* EXPBlockDefinedMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPBlockDefinedMatcher.h; sourceTree = "<group>"; };
@@ -296,29 +289,8 @@
 			isa = PBXGroup;
 			children = (
 				06F88F3B18F7D5290078E637 /* expecta */,
-				06F88F0D18F7D2350078E637 /* TKRGuard */,
 			);
 			path = Externals;
-			sourceTree = "<group>";
-		};
-		06F88F0D18F7D2350078E637 /* TKRGuard */ = {
-			isa = PBXGroup;
-			children = (
-				06F88F2018F7D2350078E637 /* TKRGuard */,
-			);
-			path = TKRGuard;
-			sourceTree = "<group>";
-		};
-		06F88F2018F7D2350078E637 /* TKRGuard */ = {
-			isa = PBXGroup;
-			children = (
-				06F88F2118F7D2350078E637 /* TKRGuard.h */,
-				06F88F2218F7D2350078E637 /* TKRGuard.m */,
-				06F88F2318F7D2350078E637 /* TKRGuardStatus.h */,
-				06F88F2418F7D2350078E637 /* TKRGuardToken.h */,
-				06F88F2518F7D2350078E637 /* TKRGuardToken.m */,
-			);
-			path = TKRGuard;
 			sourceTree = "<group>";
 		};
 		06F88F3B18F7D5290078E637 /* expecta */ = {
@@ -523,7 +495,6 @@
 				06DF8B8D18F79FF3007BABCB /* TKRSegueOptionsTest.m in Sources */,
 				06DF8B8B18F79FBA007BABCB /* UIViewController+SegueOptions.m in Sources */,
 				06F88FCA18F7D5290078E637 /* EXPDoubleTuple.m in Sources */,
-				06F88F3518F7D2350078E637 /* TKRGuard.m in Sources */,
 				06F88FDB18F7D5290078E637 /* EXPMatchers+beLessThanOrEqualTo.m in Sources */,
 				06F88FD918F7D5290078E637 /* EXPMatchers+beKindOf.m in Sources */,
 				06F88FE518F7D5290078E637 /* EXPMatchers+notify.m in Sources */,
@@ -552,7 +523,6 @@
 				06F88FD518F7D5290078E637 /* EXPMatchers+beGreaterThanOrEqualTo.m in Sources */,
 				06F88FE818F7D5290078E637 /* EXPMatchers+respondTo.m in Sources */,
 				06F88FE218F7D5290078E637 /* EXPMatchers+endWith.m in Sources */,
-				06F88F3618F7D2350078E637 /* TKRGuardToken.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
             endingLineNumber = "59"
-            landmarkName = "-testModalSegue"
+            landmarkName = "-testPushSegue"
             landmarkType = "5">
             <Locations>
                <Location
@@ -75,7 +75,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
             endingLineNumber = "35"
-            landmarkName = "-segueOptions"
+            landmarkName = "-performSegueWithIdentifier:sender:options:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -91,8 +91,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
             endingLineNumber = "42"
-            landmarkName = "@implementation UIViewController(SegueOptions)"
-            landmarkType = "3">
+            landmarkName = "-segueOptions"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		068578C818F8B6AE00BCB027 /* TestHostCustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 068578C718F8B6AE00BCB027 /* TestHostCustomSegue.m */; };
+		068578CB18F8F8D700BCB027 /* TKRSegueOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 068578CA18F8F8D700BCB027 /* TKRSegueOption.m */; };
 		06DF8B6C18F7871B007BABCB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DF8B6B18F7871B007BABCB /* XCTest.framework */; };
 		06DF8B6D18F7871B007BABCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DF8B5218F7871B007BABCB /* Foundation.framework */; };
 		06DF8B6E18F7871B007BABCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DF8B5618F7871B007BABCB /* UIKit.framework */; };
@@ -70,6 +72,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		068578C618F8B6AE00BCB027 /* TestHostCustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHostCustomSegue.h; sourceTree = "<group>"; };
+		068578C718F8B6AE00BCB027 /* TestHostCustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHostCustomSegue.m; sourceTree = "<group>"; };
+		068578C918F8F8D700BCB027 /* TKRSegueOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKRSegueOption.h; sourceTree = "<group>"; };
+		068578CA18F8F8D700BCB027 /* TKRSegueOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKRSegueOption.m; sourceTree = "<group>"; };
 		06DF8B5218F7871B007BABCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		06DF8B5418F7871B007BABCB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		06DF8B5618F7871B007BABCB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -251,10 +257,12 @@
 			isa = PBXGroup;
 			children = (
 				06DF8B8818F79FBA007BABCB /* TKRSegueOptions.h */,
-				06DF8B8918F79FBA007BABCB /* UIViewController+SegueOptions.h */,
-				06DF8B8A18F79FBA007BABCB /* UIViewController+SegueOptions.m */,
+				068578C918F8F8D700BCB027 /* TKRSegueOption.h */,
+				068578CA18F8F8D700BCB027 /* TKRSegueOption.m */,
 				06F8901F18F7E2E90078E637 /* TKRSegueOptionsSwizzling.h */,
 				06F8902018F7E2E90078E637 /* TKRSegueOptionsSwizzling.m */,
+				06DF8B8918F79FBA007BABCB /* UIViewController+SegueOptions.h */,
+				06DF8B8A18F79FBA007BABCB /* UIViewController+SegueOptions.m */,
 			);
 			name = TKRSegueOptions;
 			path = ../TKRSegueOptions;
@@ -268,6 +276,8 @@
 				06F88EE718F7CC380078E637 /* Main.storyboard */,
 				06F88EED18F7CC380078E637 /* ViewController.h */,
 				06F88EEE18F7CC380078E637 /* ViewController.m */,
+				068578C618F8B6AE00BCB027 /* TestHostCustomSegue.h */,
+				068578C718F8B6AE00BCB027 /* TestHostCustomSegue.m */,
 				06F88EF018F7CC380078E637 /* Images.xcassets */,
 				06F88EDC18F7CC380078E637 /* Supporting Files */,
 			);
@@ -522,6 +532,7 @@
 				06F88FCF18F7D5290078E637 /* EXPUnsupportedObject.m in Sources */,
 				06F88FD518F7D5290078E637 /* EXPMatchers+beGreaterThanOrEqualTo.m in Sources */,
 				06F88FE818F7D5290078E637 /* EXPMatchers+respondTo.m in Sources */,
+				068578CB18F8F8D700BCB027 /* TKRSegueOption.m in Sources */,
 				06F88FE218F7D5290078E637 /* EXPMatchers+endWith.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,6 +543,7 @@
 			files = (
 				06F88EEF18F7CC380078E637 /* ViewController.m in Sources */,
 				06F88EE618F7CC380078E637 /* AppDelegate.m in Sources */,
+				068578C818F8B6AE00BCB027 /* TestHostCustomSegue.m in Sources */,
 				06F88EE218F7CC380078E637 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

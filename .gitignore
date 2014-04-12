@@ -14,12 +14,12 @@ tmp/
 temp/
 
 # Xcode project files except for the project file
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddata
-*.xcworkspace/*
-!*.xcworkspace/project.pbxproj
-!*.xcworkspace/xcshareddata
+**/*.xcodeproj/*
+!**/*.xcodeproj/project.pbxproj
+!**/*.xcodeproj/xcshareddata
+**/*.xcworkspace/*
+!**/*.xcworkspace/project.pbxproj
+!**/*.xcworkspace/xcshareddata
  
 # User-specific project settings
 *.mode1v3

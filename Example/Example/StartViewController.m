@@ -8,6 +8,8 @@
 
 @interface StartViewController ()
 @property (weak) IBOutlet UILabel *countLabel;
+@property (weak) IBOutlet UILabel *leftLabel;
+@property (weak) IBOutlet UILabel *rightLabel;
 @end 
 
 @implementation StartViewController
@@ -16,16 +18,21 @@
 #pragma mark - View lifecycle
 //----------------------------------------------------------------------------//
 
-- (void)viewDidLoad
+- (void)awakeFromNib
 {
-    [super viewDidLoad];
-
+    __weak typeof(self) wself = self;
     TKRSegueOptionSetting *setting = [TKRSegueOptionSetting settingWithDictionary:@{
         @"Navigation": ^{
-            return self.countLabel.text;
+            return wself.countLabel.text;
         },
         @"Tab": ^{
-            return self.countLabel.text;
+            return wself.countLabel.text;
+        },
+        @"Embed1": ^{
+            return wself.leftLabel.text;
+        },
+        @"Embed2": ^{
+            return wself.rightLabel.text;
         },
     }];
     self.segueOptionSetting = setting;

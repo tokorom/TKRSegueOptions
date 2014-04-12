@@ -17,6 +17,9 @@ temp/
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata
+*.xcworkspace/*
+!*.xcworkspace/project.pbxproj
+!*.xcworkspace/xcshareddata
  
 # User-specific project settings
 *.mode1v3

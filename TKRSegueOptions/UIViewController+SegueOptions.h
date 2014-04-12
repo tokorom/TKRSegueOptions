@@ -9,11 +9,12 @@
 
 @interface UIViewController (SegueOptions)
 
-@property (strong) TKRSegueOptionSetting *segueOptionSetting;
-
 - (void)performSegueWithIdentifier:(NSString *)identifier options:(id)options;
 - (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender options:(id)options;
 
 - (TKRSegueOption *)segueOptions;
+
+// Please override this method if you need
+- (TKRSegueOptionSetting *)segueOptionSetting;
 
 @end

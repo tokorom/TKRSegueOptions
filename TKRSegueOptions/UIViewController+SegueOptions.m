@@ -41,12 +41,7 @@ static NSString * const UIViewControllerSegueOptionsSettingKey = @"UIViewControl
 
 - (TKRSegueOptionSetting *)segueOptionSetting
 {
-    return self.tkr_properties[UIViewControllerSegueOptionsSettingKey];
-}
-
-- (void)setSegueOptionSetting:(TKRSegueOptionSetting *)segueOptionSetting
-{
-    self.tkr_properties[UIViewControllerSegueOptionsSettingKey] = segueOptionSetting;
+    return nil;
 }
 
 //----------------------------------------------------------------------------//
@@ -63,8 +58,15 @@ static NSString * const UIViewControllerSegueOptionsSettingKey = @"UIViewControl
     }
 
     id options;
-    if (self.segueOptionSetting[segue.identifier]) {
-        id (^block)(void) = self.segueOptionSetting[segue.identifier];
+    TKRSegueOptionSetting *setting = self.tkr_properties[UIViewControllerSegueOptionsSettingKey];
+    if (!setting) {
+        setting = [self segueOptionSetting];
+        if (setting) {
+            self.tkr_properties[UIViewControllerSegueOptionsSettingKey] = setting;
+        }
+    }
+    if (setting[segue.identifier]) {
+        id (^block)(void) = setting[segue.identifier];
         options = [TKRSegueOption optionWithObject:block()];
     }
 

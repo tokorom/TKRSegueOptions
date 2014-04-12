@@ -147,4 +147,12 @@
     expect(option.string).to.equal(@"hello");
 }
 
+- (void)testSegueOptionSetting
+{
+    UIViewController *viewController = self.startViewController;
+    UIViewController *embeddedViewController = viewController.childViewControllers.firstObject;
+    expect(embeddedViewController).toNot.beNil();
+    expect(embeddedViewController.segueOptions.doubleValue).to.equal(55.5);
+}
+
 @end

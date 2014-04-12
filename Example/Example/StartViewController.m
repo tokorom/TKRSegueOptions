@@ -18,10 +18,10 @@
 #pragma mark - View lifecycle
 //----------------------------------------------------------------------------//
 
-- (void)awakeFromNib
+- (TKRSegueOptionSetting *)segueOptionSetting
 {
     __weak typeof(self) wself = self;
-    TKRSegueOptionSetting *setting = [TKRSegueOptionSetting settingWithDictionary:@{
+    return [TKRSegueOptionSetting settingWithDictionary:@{
         @"Navigation": ^{
             return wself.countLabel.text;
         },
@@ -35,7 +35,6 @@
             return wself.rightLabel.text;
         },
     }];
-    self.segueOptionSetting = setting;
 }
 
 //----------------------------------------------------------------------------//

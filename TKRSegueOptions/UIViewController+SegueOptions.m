@@ -10,6 +10,7 @@
 const char UIViewControllerSegueOptionsPropertiesKey[] = "UIViewController+SegueOptions.properties";
 static NSString * const UIViewControllerSegueOptionsPostKey = @"UIViewController+SegueOptions.post";
 static NSString * const UIViewControllerSegueOptionsGotKey = @"UIViewController+SegueOptions.got";
+static NSString * const UIViewControllerSegueOptionsSettingKey = @"UIViewController+SegueOptions.setting";
 
 @implementation UIViewController (SegueOptions)
 
@@ -25,12 +26,7 @@ static NSString * const UIViewControllerSegueOptionsGotKey = @"UIViewController+
 - (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender options:(id)options
 {
     if (options) {
-        TKRSegueOption *option;
-        if ([options isKindOfClass:[TKRSegueOption class]]) {
-            option = options;
-        } else {
-            option = [TKRSegueOption optionWithObject:options];
-        }
+        TKRSegueOption *option = [TKRSegueOption optionWithObject:options];
         self.tkr_properties[UIViewControllerSegueOptionsPostKey][identifier] = option;
     } else {
         [self.tkr_properties[UIViewControllerSegueOptionsPostKey] removeObjectForKey:identifier];
@@ -43,6 +39,16 @@ static NSString * const UIViewControllerSegueOptionsGotKey = @"UIViewController+
     return self.tkr_properties[UIViewControllerSegueOptionsGotKey];
 }
 
+- (TKRSegueOptionSetting *)segueOptionSetting
+{
+    return self.tkr_properties[UIViewControllerSegueOptionsSettingKey];
+}
+
+- (void)setSegueOptionSetting:(TKRSegueOptionSetting *)segueOptionSetting
+{
+    self.tkr_properties[UIViewControllerSegueOptionsSettingKey] = segueOptionSetting;
+}
+
 //----------------------------------------------------------------------------//
 #pragma mark - UIViewController
 //----------------------------------------------------------------------------//
@@ -52,8 +58,19 @@ static NSString * const UIViewControllerSegueOptionsGotKey = @"UIViewController+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if (!segue.identifier) {
+        return;
+    }
+
+    id options;
+    if (self.segueOptionSetting[segue.identifier]) {
+        id (^block)(void) = self.segueOptionSetting[segue.identifier];
+        options = [TKRSegueOption optionWithObject:block()];
+    }
+
     NSMutableDictionary *properties = [segue.sourceViewController tkr_properties];
-    id options = properties[UIViewControllerSegueOptionsPostKey][segue.identifier];
+    id got = properties[UIViewControllerSegueOptionsPostKey][segue.identifier];
+    options = got ?: options;
     [self tkr_updateSegueOptions:options forViewController:segue.destinationViewController];
 
     if ([segue.destinationViewController isKindOfClass:[UINavigationController class]]) {
@@ -65,6 +82,8 @@ static NSString * const UIViewControllerSegueOptionsGotKey = @"UIViewController+
             [self tkr_updateSegueOptions:options forViewController:viewController];
         }
     } 
+
+    [self.tkr_properties[UIViewControllerSegueOptionsPostKey] removeObjectForKey:segue.identifier];
 }
 
 #pragma clang diagnostic pop

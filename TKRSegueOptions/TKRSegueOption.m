@@ -26,7 +26,11 @@
 
 + (instancetype)optionWithObject:(id)object
 {
-    return [[TKRSegueOption alloc] initWithObject:object];
+    if ([object isKindOfClass:[TKRSegueOption class]]) {
+        return object;
+    } else {
+        return [[TKRSegueOption alloc] initWithObject:object];
+    }
 }
 
 //----------------------------------------------------------------------------//

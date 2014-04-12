@@ -5,15 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>4F7804AA-4DA8-49C9-87AC-11B78CD91538</string>
+	<string>8E03B862-32FB-4633-BCB6-AA13CF1C53DB</string>
 	<key>IDESourceControlProjectName</key>
 	<string>TKRSegueOptions</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>2ECF2E50-E64C-484D-9ACA-1B61919DDD48</key>
 		<string>https://github.com/specta/expecta.git</string>
-		<key>3257E859-9E34-4C93-96FA-6B9DBBC300E7</key>
-		<string>https://github.com/tokorom/TKRGuard.git</string>
 		<key>3437288E-31A2-4DCB-BD82-4CEB4595C834</key>
 		<string>ssh://github.com/tokorom/TKRSegueOptions.git</string>
 	</dict>
@@ -23,8 +21,6 @@
 	<dict>
 		<key>2ECF2E50-E64C-484D-9ACA-1B61919DDD48</key>
 		<string>../Tests/Externals/expecta</string>
-		<key>3257E859-9E34-4C93-96FA-6B9DBBC300E7</key>
-		<string>../Tests/Externals/TKRGuard</string>
 		<key>3437288E-31A2-4DCB-BD82-4CEB4595C834</key>
 		<string>..</string>
 	</dict>
@@ -43,14 +39,6 @@
 			<string>2ECF2E50-E64C-484D-9ACA-1B61919DDD48</string>
 			<key>IDESourceControlWCCName</key>
 			<string>expecta</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>3257E859-9E34-4C93-96FA-6B9DBBC300E7</string>
-			<key>IDESourceControlWCCName</key>
-			<string>TKRGuard</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

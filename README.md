@@ -1,7 +1,7 @@
 TKRSegueOptions
 ==================
 
-You can pass the objects to destination view controller with UIStrobyardSegue.
+You can pass the objects to destination view controller with UIStoryboardSegue.
 
 ## Do you have no complaints on the view controller transition now?
 

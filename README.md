@@ -115,6 +115,22 @@ NSLog(@"number: %@, string: %@", option.number, option.string);
 }
 ```
 
+## Swift Samples
+
+- Source View Controller
+
+```swift
+self.performSegueWithIdentifier("Modal", options: ["title": "TITLE"])
+```
+
+-  Destination View Controller
+
+```swift
+if let title = self.segueOptions?["title"] as? NSString {
+  self.label.text = title //< "TITLE"
+}
+```
+
 ## More information
 
 - [日本語での紹介記事](http://www.tokoro.me/2014/04/12/improve-storyboard-segue/)

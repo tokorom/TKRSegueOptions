@@ -9,12 +9,13 @@
 
 @interface UIViewController (SegueOptions)
 
+@property (readonly) TKRSegueOption *segueOptions;
+
 - (void)performSegueWithIdentifier:(NSString *)identifier options:(id)options;
 - (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender options:(id)options;
 
-- (TKRSegueOption *)segueOptions;
-
 // Please override this method if you need
 - (TKRSegueOptionSetting *)segueOptionSetting;
+- (id)segueOptionsForSegue:(UIStoryboardSegue *)segue;
 
 @end

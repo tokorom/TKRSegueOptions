@@ -6,17 +6,17 @@
 
 @interface TKRSegueOption : NSObject
 
+@property (readonly) id value;
+@property (readonly) NSString *stringValue;
+@property (readonly) NSNumber *numberValue;
+@property (readonly) double doubleValue;
+@property (readonly) float floatValue;
+@property (readonly) int intValue;
+@property (readonly) NSInteger integerValue;
+@property (readonly) BOOL boolValue;
+
 - (instancetype)initWithObject:(id)object;
 + (instancetype)optionWithObject:(id)object;
-
-- (id)value;
-- (NSString *)stringValue;
-- (NSNumber *)numberValue;
-- (double)doubleValue;
-- (float)floatValue;
-- (int)intValue;
-- (NSInteger)integerValue;
-- (BOOL)boolValue;
 
 - (void)setObject:(id)obj atIndexedSubscript:(NSUInteger)idx;
 - (id)objectAtIndexedSubscript:(NSUInteger)idx;

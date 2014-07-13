@@ -44,6 +44,11 @@ static NSString * const UIViewControllerSegueOptionsSettingKey = @"UIViewControl
     return nil;
 }
 
+- (id)segueOptionsForSegue:(UIStoryboardSegue *)segue
+{
+    return nil;
+}
+
 //----------------------------------------------------------------------------//
 #pragma mark - UIViewController
 //----------------------------------------------------------------------------//
@@ -65,7 +70,8 @@ static NSString * const UIViewControllerSegueOptionsSettingKey = @"UIViewControl
             self.tkr_properties[UIViewControllerSegueOptionsSettingKey] = setting;
         }
     }
-    if (setting[segue.identifier]) {
+    options = [self segueOptionsForSegue:segue];
+    if (!options && setting[segue.identifier]) {
         id (^block)(void) = setting[segue.identifier];
         options = [TKRSegueOption optionWithObject:block()];
     }

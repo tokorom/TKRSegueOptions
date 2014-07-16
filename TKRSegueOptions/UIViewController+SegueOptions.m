@@ -34,6 +34,11 @@ static NSString * const UIViewControllerSegueOptionsSettingKey = @"UIViewControl
     [self performSegueWithIdentifier:identifier sender:sender];
 }
 
+- (void)takeOverSegueOptionsFromViewController:(UIViewController *)viewController
+{
+    [self.class tkr_updateSegueOptions:viewController.segueOptions forViewController:self];
+}
+
 - (id)segueOptions
 {
     return self.tkr_properties[UIViewControllerSegueOptionsGotKey];
@@ -79,15 +84,15 @@ static NSString * const UIViewControllerSegueOptionsSettingKey = @"UIViewControl
     NSMutableDictionary *properties = [segue.sourceViewController tkr_properties];
     id got = properties[UIViewControllerSegueOptionsPostKey][segue.identifier];
     options = got ?: options;
-    [self tkr_updateSegueOptions:options forViewController:segue.destinationViewController];
+    [self.class tkr_updateSegueOptions:options forViewController:segue.destinationViewController];
 
     if ([segue.destinationViewController isKindOfClass:[UINavigationController class]]) {
         UINavigationController *navigationController = segue.destinationViewController;
-        [self tkr_updateSegueOptions:options forViewController:navigationController.viewControllers.lastObject];
+        [self.class tkr_updateSegueOptions:options forViewController:navigationController.viewControllers.lastObject];
     } else if ([segue.destinationViewController isKindOfClass:[UITabBarController class]]) {
         UITabBarController *tabBarController = segue.destinationViewController;
         for (UIViewController *viewController in tabBarController.viewControllers) {
-            [self tkr_updateSegueOptions:options forViewController:viewController];
+            [self.class tkr_updateSegueOptions:options forViewController:viewController];
         }
     } 
 
@@ -111,7 +116,7 @@ static NSString * const UIViewControllerSegueOptionsSettingKey = @"UIViewControl
     return properties;
 }
 
-- (void)tkr_updateSegueOptions:(id)options forViewController:(UIViewController *)viewController
++ (void)tkr_updateSegueOptions:(id)options forViewController:(UIViewController *)viewController
 {
     NSMutableDictionary *properties = [viewController tkr_properties];
     if (options) {

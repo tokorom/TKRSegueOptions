@@ -34,6 +34,9 @@
         @"Embed2": ^{
             return wself.rightLabel.text;
         },
+        @"Custom": ^{
+            return wself.countLabel.text;
+        },
     }];
 }
 

@@ -15,6 +15,7 @@
 - (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender options:(id)options;
 
 - (void)takeOverSegueOptionsFromViewController:(UIViewController *)viewController;
+- (void)manualUpdateWithSegueOption:(TKRSegueOption *)segueOption;
 
 // Please override this method if you need
 - (TKRSegueOptionSetting *)segueOptionSetting;

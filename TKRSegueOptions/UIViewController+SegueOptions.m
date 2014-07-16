@@ -39,6 +39,16 @@ static NSString * const UIViewControllerSegueOptionsSettingKey = @"UIViewControl
     [self.class tkr_updateSegueOptions:viewController.segueOptions forViewController:self];
 }
 
+- (void)manualUpdateWithSegueOption:(TKRSegueOption *)segueOption
+{
+    NSMutableDictionary *properties = [self tkr_properties];
+    if (segueOption) {
+        properties[UIViewControllerSegueOptionsGotKey] = segueOption;
+    } else {
+        [properties removeObjectForKey:UIViewControllerSegueOptionsGotKey];
+    }
+}
+
 - (id)segueOptions
 {
     return self.tkr_properties[UIViewControllerSegueOptionsGotKey];

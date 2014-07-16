@@ -17,6 +17,7 @@
 		0685793618F90AC800BCB027 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0685793418F90AC800BCB027 /* Main_iPad.storyboard */; };
 		0685793918F90AC900BCB027 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0685793818F90AC900BCB027 /* ViewController.m */; };
 		0685793B18F90AC900BCB027 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0685793A18F90AC900BCB027 /* Images.xcassets */; };
+		06D57303197618BA00DCC7A9 /* CustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D57302197618BA00DCC7A9 /* CustomSegue.m */; };
 		06DE0ECB18F90CBF007E9992 /* TKRSegueOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DE0EC518F90CBF007E9992 /* TKRSegueOption.m */; };
 		06DE0ECC18F90CBF007E9992 /* TKRSegueOptionsSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DE0EC818F90CBF007E9992 /* TKRSegueOptionsSwizzling.m */; };
 		06DE0ECD18F90CBF007E9992 /* UIViewController+SegueOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DE0ECA18F90CBF007E9992 /* UIViewController+SegueOptions.m */; };
@@ -41,6 +42,8 @@
 		0685793818F90AC900BCB027 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0685793A18F90AC900BCB027 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0685794118F90AC900BCB027 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		06D57301197618BA00DCC7A9 /* CustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegue.h; sourceTree = "<group>"; };
+		06D57302197618BA00DCC7A9 /* CustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegue.m; sourceTree = "<group>"; };
 		06DE0EC418F90CBF007E9992 /* TKRSegueOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKRSegueOption.h; sourceTree = "<group>"; };
 		06DE0EC518F90CBF007E9992 /* TKRSegueOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKRSegueOption.m; sourceTree = "<group>"; };
 		06DE0EC618F90CBF007E9992 /* TKRSegueOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKRSegueOptions.h; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 		0685792518F90AC800BCB027 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				06D57301197618BA00DCC7A9 /* CustomSegue.h */,
+				06D57302197618BA00DCC7A9 /* CustomSegue.m */,
 				0685792E18F90AC800BCB027 /* AppDelegate.h */,
 				0685792F18F90AC800BCB027 /* AppDelegate.m */,
 				0685793118F90AC800BCB027 /* Main_iPhone.storyboard */,
@@ -216,6 +221,7 @@
 				0685792C18F90AC800BCB027 /* main.m in Sources */,
 				06DE0ECC18F90CBF007E9992 /* TKRSegueOptionsSwizzling.m in Sources */,
 				06DE0ECD18F90CBF007E9992 /* UIViewController+SegueOptions.m in Sources */,
+				06D57303197618BA00DCC7A9 /* CustomSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

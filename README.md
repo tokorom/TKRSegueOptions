@@ -52,7 +52,7 @@ self.label.text = self.segueOptions.stringValue; //< @"888"
 
 ## Other Usages
 
-- pass the dictionary
+### pass the dictionary
 
 ```objective-c
 // Source View Controller
@@ -66,7 +66,7 @@ NSDictionary *options = @{
 NSURL *url = self.segueOptions[@"url"];
 ```
 
-- If you want to do in a format that was more tight
+### If you want to do in a format that was more tight
 
 ```objective-c
 // Source View Controller
@@ -80,7 +80,7 @@ CustomSegueOption *option = (CustomSegueOption *)presentedViewController.segueOp
 NSLog(@"number: %@, string: %@", option.number, option.string);
 ```
 
-- If you can not use performSegue (For example Container View)
+### If you can not use performSegue (For example Container View)
 
 ```objective-c
 // Implement this method in source view controller
@@ -100,6 +100,26 @@ NSLog(@"number: %@, string: %@", option.number, option.string);
 
 - key is UIStoryboard's identifier
 - value is block that returns the you want to pass to the transition destination
+
+### If you want to use a Custom Segue
+
+```objective-c
+@implementation CustomSegue
+
+- (void)perform
+{
+    UIViewController *sourceViewController = self.sourceViewController;
+    UIViewController *viewController;
+    viewController = [sourceViewController.storyboard instantiateViewControllerWithIdentifier:@"NextViewController"];
+
+    // you can use `takeOverSegueOptionsFromViewController:`
+    [viewController takeOverSegueOptionsFromViewController:self.destinationViewController];
+
+    [self.sourceViewController presentViewController:viewController animated:YES completion:nil];
+}
+    
+@end
+```
 
 ## Supplement
 
